@@ -1,4 +1,4 @@
-# Swift Crypto
+# Swift Crypto - forked because somebody put spaces in directory names and made it hard for SPM to build on linux
 
 Swift Crypto is an open-source implementation of a substantial portion of the API of [Apple CryptoKit](https://developer.apple.com/documentation/cryptokit) suitable for use on Linux platforms. It enables cross-platform or server applications with the advantages of CryptoKit.
 
