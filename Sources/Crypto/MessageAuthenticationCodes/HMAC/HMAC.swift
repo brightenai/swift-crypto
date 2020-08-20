@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 import Foundation
 
 /// Performs HMAC - Keyed-Hashing for Message Authentication
@@ -175,4 +175,4 @@ public struct HashedAuthenticationCode<H: HashFunction>: MessageAuthenticationCo
         return try digest.withUnsafeBytes(body)
     }
 }
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM

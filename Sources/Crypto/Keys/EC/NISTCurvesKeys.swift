@@ -13,14 +13,14 @@
 //===----------------------------------------------------------------------===//
 import Foundation
 
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-typealias SupportedCurveDetailsImpl = CorecryptoSupportedNISTCurve
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//typealias SupportedCurveDetailsImpl = CorecryptoSupportedNISTCurve
+//#else
 typealias SupportedCurveDetailsImpl = OpenSSLSupportedNISTCurve
-#endif
+//#endif
 
 protocol ECPublicKey {
     init <Bytes: ContiguousBytes>(rawRepresentation: Bytes) throws
@@ -53,4 +53,4 @@ public enum P384 { }
 
 /// The NIST P-521 Elliptic Curve.
 public enum P521 { }
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM

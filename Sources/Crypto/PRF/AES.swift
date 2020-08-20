@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 /// The Advanced Encryption Standard (AES)
 public enum AES {
     static let blockSizeByteCount = 16
@@ -33,4 +33,4 @@ extension AES {
         }
     }
 }
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM

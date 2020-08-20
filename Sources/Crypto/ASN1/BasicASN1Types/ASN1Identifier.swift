@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 import Foundation
 
 extension ASN1 {
@@ -105,4 +105,4 @@ extension ASN1.ASN1Identifier: CustomStringConvertible {
     }
 }
 
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM

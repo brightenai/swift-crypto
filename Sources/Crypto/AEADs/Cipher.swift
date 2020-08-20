@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 import Foundation
 
 protocol AEADSealedBox {
@@ -65,4 +65,4 @@ protocol Cipher {
     static func open<AuthenticatedData: DataProtocol>
         (_ sealedBox: SealedBox, using key: Key, authenticating: AuthenticatedData) throws -> Data
 }
-#endif
+//#endif

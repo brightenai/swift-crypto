@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 import Foundation
 // MARK: - Generated file, do NOT edit
 // any edits of this file WILL be overwritten and thus discarded
@@ -435,4 +435,4 @@ extension P521.Signing.PublicKey: DataValidator {
  }
 
 
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM

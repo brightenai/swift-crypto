@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 /// Errors thrown in CryptoKit
 /// - incorrectKeySize: A key is being deserialized with an incorrect key size.
 /// - incorrectParameterSize: The number of bytes passed for a given argument is incorrect.
@@ -53,4 +53,4 @@ public enum CryptoKitASN1Error: Error {
     /// It was not possible to parse a string as a PEM document.
     case invalidPEMDocument
 }
-#endif
+//#endif

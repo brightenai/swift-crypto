@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 import Foundation
 
 /// The HMAC-based Extract-and-Expand Key Derivation Function (IETF RFC 5869)
@@ -128,4 +128,4 @@ public struct HKDF<H: HashFunction> {
         return SymmetricKey(data: output.prefix(outputByteCount))
     }
 }
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM

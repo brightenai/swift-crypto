@@ -11,15 +11,15 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-typealias AESGCMImpl = CoreCryptoGCMImpl
-import Security
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//typealias AESGCMImpl = CoreCryptoGCMImpl
+//import Security
+//#else
 typealias AESGCMImpl = OpenSSLAESGCMImpl
-#endif
+//#endif
 
 import Foundation
 
@@ -141,4 +141,4 @@ extension AES.GCM {
         
     }
 }
-#endif  // Linux or !SwiftPM
+//#endif  // Linux or !SwiftPM

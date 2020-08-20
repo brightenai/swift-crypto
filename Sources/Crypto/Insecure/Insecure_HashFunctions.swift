@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 extension Insecure {
     /// The SHA-1 Hash Function.
     /// ⚠️ Security Recommendation: The SHA-1 hash function is no longer considered secure. We strongly recommend using the SHA-256 hash function instead.
@@ -84,4 +84,4 @@ extension Insecure {
         }
     }
 }
-#endif  // Linux or !SwiftPM
+//#endif  // Linux or !SwiftPM

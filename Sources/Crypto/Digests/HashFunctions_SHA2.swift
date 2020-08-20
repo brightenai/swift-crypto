@@ -11,9 +11,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
-#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
-@_exported import CryptoKit
-#else
+//#if (os(macOS) || os(iOS) || os(watchOS) || os(tvOS)) && CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
+//@_exported import CryptoKit
+//#else
 /// The SHA-256 Hash Function
 public struct SHA256: HashFunctionImplementationDetails {
     public static var blockByteCount: Int {
@@ -111,4 +111,4 @@ public struct SHA512: HashFunctionImplementationDetails {
         return impl.finalize()
     }
 }
-#endif // Linux or !SwiftPM
+//#endif // Linux or !SwiftPM
